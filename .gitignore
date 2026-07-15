@@ -1,0 +1,16 @@
+# Pasta particular: não enviar ao GitHub
+/MeusArquivos/
+
+# Executáveis compilados
+*.exe
+
+# Outros arquivos de compilação
+*.obj
+*.o
+*.c
+*.map
+*.tds
+
+# Arquivos temporários
+*.tmp
+*.log
