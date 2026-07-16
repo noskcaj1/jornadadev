@@ -39,23 +39,3 @@ Para cada situação abaixo, indique se é um algoritmo válido. Se não for, ex
 **Resposta:** ❌ <span style="color: red; font-size: 15px;">Não Válido</span> Não especifica **quando** o cozimento deve terminar — viola o requisito de **finitude**.
 
 ---
-
-## Exercício 2 — Refinamento sucessivo
-
-Aplique a técnica do refinamento sucessivo (visão geral → detalhamento) para o problema:
-
-> *"Um sistema de caixa de supermercado deve registrar os itens de uma compra, calcular o subtotal, aplicar desconto se o cliente tiver cartão fidelidade (5%) e mostrar o total a pagar."*
-
-Entregue dois níveis: o **Nível 1** (visão geral, 3–4 passos) e o **Nível 2** (cada passo detalhado).
-
----
-
-### 🔹 Nível 1 — Visão geral
-
-*(preencher com a resposta)*
-
----
-
-### 🔹 Nível 2 — Detalhamento
-
-*(preencher com a resposta)*
