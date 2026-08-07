@@ -1,6 +1,9 @@
 # Pasta particular: não enviar ao GitHub
 /MeusArquivos/
 
+# Pasta VsCode
+.vscode/
+
 # Executáveis compilados
 *.exe
 
