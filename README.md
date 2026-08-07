@@ -33,6 +33,17 @@ Colocando a tabela `ZA1` para funcionar na tela. Comparação entre `AxCadastro`
 ### Módulo 09 — Dicionário avançado, gatilhos e tratamento de erros
 O módulo mais desafiador da trilha até aqui. Modelagem completa de duas tabelas relacionadas (`SZ1` - Contatos e `SZ2` - Interações), com campos, índices e domínios no dicionário de dados; uma biblioteca de rotinas reaproveitáveis; campos virtuais, gatilhos automáticos (`SX7`) e validação cruzada entre tabelas; criação de um menu dentro do módulo de Compras (`SIGACOM`); tratamento de erros com `BEGIN SEQUENCE`/`RECOVER` e `ErrorBlock`; gravação seguindo o padrão "à prova de falhas" com `BeginTran`/`CommitTran`/`RollBackTran`; e, como desafio final, um executor seguro genérico e uma validação de integridade referencial (impedir excluir um Contato que tenha Interações vinculadas).
 
+### TCC — Controle de Fornecimento ISO 9001 (SIGACOM)
+O projeto final da trilha, reunindo tudo que foi construído nos módulos anteriores em uma solução completa dentro do módulo de Compras (`SIGACOM`). Duas tabelas customizadas trabalham em conjunto: `ZZ1` (Controle de Fornecimento), que mantém os certificados de qualidade ISO 9001 de cada fornecedor, com legenda colorida por vencimento (vermelho/amarelo/verde); e `ZZ2` (Ocorrências de Fornecedores), que registra não conformidades por entrega e calcula automaticamente o percentual de não conformidade contra a tolerância definida no certificado.
+
+Destaques técnicos do TCC:
+- **Biblioteca própria (`STTZZLIB.PRW`)** concentrando toda a regra de negócio reutilizável — zero duplicação de código entre telas, gatilhos e validações do dicionário.
+- **Motor CRUD centralizado (`U_ExecCRUD`)**, envelopando `AxInclui`/`AxAltera`/`AxDeleta` em `BEGIN SEQUENCE`/`RECOVER` com log técnico e rollback automático em caso de erro.
+- **Integridade referencial**: não é possível excluir um controle `ZZ1` que tenha ocorrências `ZZ2` vinculadas.
+- **Navegação relacionada**: botão "Ocorrências" no browse da `ZZ1` que abre a `ZZ2` já filtrada pelo fornecedor selecionado.
+- **Programação orientada a objetos**: classe `ZFORNISO` encapsulando a análise de conformidade de um fornecedor.
+- Validações em camadas (defesa em profundidade): regras no dicionário (`SX3`), gatilhos (`SX7`) e validação de tela inteira (`TudoOk`).
+
 ## 📈 Panorama geral
 
 | Módulo | Foco principal |
@@ -46,5 +57,10 @@ O módulo mais desafiador da trilha até aqui. Modelagem completa de duas tabela
 | 07 | Dicionário de dados do Protheus |
 | 08 | Telas, cadastros e regras de negócio |
 | 09 | Gatilhos, validações e tratamento de erros |
+| TCC | Controle de Fornecimento ISO 9001 — projeto integrador |
 
-Do "Olá, mundo!" a rotinas com transação e integridade referencial no Protheus — cada módulo empilha um pouco mais de complexidade em cima do anterior, e essa pasta é o registro dessa evolução. 🚀
+Do "Olá, mundo!" a um projeto completo com transação, integridade referencial e POO no Protheus — cada módulo empilha um pouco mais de complexidade em cima do anterior, e essa pasta é o registro dessa evolução. 🚀
+
+## 🎓 Encerramento da Jornada
+
+Com a entrega do TCC, chega ao fim a **Jornada Dev da TOTVS Paulista**. Foi uma trilha intensa, do primeiro "Olá, mundo!" a um sistema completo de controle de qualidade ISO 9001 rodando no Protheus — e que deixa cada participante mais preparado tecnicamente e, acima de tudo, mais transformado como pessoa. Gratidão a Deus, à TOTVS pela oportunidade, ao mestre Matheus Nogueira pela didática e generosidade em ensinar, e a toda a turma pela parceria e pelo empenho ao longo do caminho.
