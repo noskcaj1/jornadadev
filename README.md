@@ -64,3 +64,9 @@ Do "Olá, mundo!" a um projeto completo com transação, integridade referencial
 ## 🎓 Encerramento da Jornada
 
 Com a entrega do TCC, chega ao fim a **Jornada Dev da TOTVS Paulista**. Foi uma trilha intensa, do primeiro "Olá, mundo!" a um sistema completo de controle de qualidade ISO 9001 rodando no Protheus — e que deixa cada participante mais preparado tecnicamente e, acima de tudo, mais transformado como pessoa. Gratidão a Deus, à TOTVS pela oportunidade, ao mestre Matheus Nogueira pela didática e generosidade em ensinar, e a toda a turma pela parceria e pelo empenho ao longo do caminho.
+
+## 🎸🤘😎🤘 SE  CURTE  UM  METAL,  LIGUE  O  SOM  E  CURTA  O  VÍDEO !!
+
+https://github.com/user-attachments/assets/0af664ba-3e26-426f-8efa-78eb0c918a51
+
+
